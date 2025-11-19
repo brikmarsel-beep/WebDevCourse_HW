@@ -1,0 +1,64 @@
+/* רקע הדף */
+body {
+    background-color: #1e3a8a;
+    /* כחול */
+    font-family: Arial, sans-serif;
+    color: white;
+    /* טקסט לבן */
+    text-align: center;
+}
+
+/* מסגרת הטבלה */
+table {
+    border: 3px solid black;
+    margin: 20px auto;
+    width: 80%;
+    border-collapse: collapse;
+}
+
+/* תאים בטבלה */
+th,
+td {
+    border: 1px solid black;
+    padding: 10px;
+    background-color: #3b82f6;
+    /* כחול בהיר */
+    color: white;
+}
+
+/* מסגרת לסרטונים */
+iframe {
+    border: 2px solid black;
+}
+
+/* סעיף 13 – עיצוב כותרת */
+.blueTitle {
+    background-color: blue;
+    color: white;
+    border: 2px solid black;
+    font-weight: bold;
+}
+
+/* סעיף 14 – שורה אחרונה מודגשת */
+.highlightRow {
+    background-color: #cce8ff;
+    /* כחול בהיר */
+    color: darkblue;
+    /* טקסט כחול כהה */
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* סעיף 15 – קישור לשיר + שינוי צבע בהובר */
+.songLink {
+    color: yellow;
+    /* צבע לינק רגיל */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.songLink:hover {
+    color: orange;
+    /* צבע חדש כשהעכבר מעל */
+    text-decoration: underline;
+}

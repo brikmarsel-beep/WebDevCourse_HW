@@ -1,0 +1,81 @@
+<nav>
+    <a href="AllHtmlElements.html">Elements</a>
+    <a href="playlist.html">Playlist</a> |
+    <a href="audioList.html">Audio List</a> |
+    <a href="contact.html">Contact</a> |
+    <a href="summary.html">Summary</a>
+</nav>
+<hr>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Favorite Songs</title>
+    <link rel="stylesheet" href="playlist.css">
+</head>
+
+<body>
+
+    <!-- כותרת הדף + class של סעיף 13 -->
+    <h1 class="blueTitle">My Favorite Songs 🎧</h1>
+
+    <table>
+
+        <!-- השורה הראשונה — גם blueTitle וגם highlightRow (סעיף 13 + 14) -->
+        <tr class="blueTitle highlightRow">
+            <th>Song</th>
+            <th>Artist</th>
+            <th>Video</th>
+        </tr>
+
+        <!-- שורה 1 -->
+        <tr>
+            <td>
+                <!-- סעיף 15: שם השיר הוא לינק ליוטיוב -->
+                <a class="songLink" href="https://www.youtube.com/watch?v=RBumgq5yVrA" target="_blank">
+                    Let Her Go
+                </a>
+            </td>
+            <td>Passenger</td>
+            <td>
+                <iframe width="300" height="170" src="https://www.youtube.com/embed/RBumgq5yVrA" frameborder="0"
+                    allowfullscreen></iframe>
+            </td>
+        </tr>
+
+        <!-- שורה 2 רגילה -->
+        <tr>
+            <td>
+                <a class="songLink" href="https://www.youtube.com/watch?v=m7Bc3pLyij0" target="_blank">
+                    breathin
+                </a>
+            </td>
+            <td>Ariana Grande</td>
+            <td>
+                <iframe width="300" height="170" src="https://www.youtube.com/embed/m7Bc3pLyij0" frameborder="0"
+                    allowfullscreen></iframe>
+            </td>
+        </tr>
+
+        <!-- השורה האחרונה — סעיף 14: תוסיפי highlightRow דרך DEVTOOLS בזמן ריצה -->
+        <tr class="highlightRow">
+            <td>
+                <a class="songLink" href="https://www.youtube.com/watch?v=60LonTJV9yo" target="_blank">
+                    1+1
+                </a>
+            </td>
+            <td>NAIKA</td>
+            <td>
+                <iframe width="300" height="170" src="https://www.youtube.com/embed/60LonTJV9yo" frameborder="0"
+                    allowfullscreen></iframe>
+            </td>
+        </tr>
+
+    </table>
+
+</body>
+
+</html>

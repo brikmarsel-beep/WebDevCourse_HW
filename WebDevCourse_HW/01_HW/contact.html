@@ -1,0 +1,70 @@
+<nav>
+    <a href="AllHtmlElements.html">Elements</a>|
+    <a href="playlist.html">Playlist</a> |
+    <a href="audioList.html">Audio List</a> |
+    <a href="contact.html">Contact</a> |
+    <a href="summary.html">Summary</a>
+</nav>
+<hr>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+
+    <h1 class="pageTitle">Contact</h1>
+
+    <table class="contactBox">
+        <tr>
+            <th colspan="2" class="formHeader">Send a Message</th>
+        </tr>
+
+        <tr>
+            <td>Name:</td>
+            <td><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td>Email:</td>
+            <td><input type="email"></td>
+        </tr>
+
+        <tr>
+            <td>Phone:</td>
+            <td><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td>Subject:</td>
+            <td><input type="text"></td>
+        </tr>
+
+        <tr>
+            <td>Message:</td>
+            <td><textarea rows="4"></textarea></td>
+        </tr>
+
+        <tr>
+            <td colspan="2" class="sendBtnRow">
+                <button onclick="sendAlert()">Send Message</button>
+            </td>
+        </tr>
+    </table>
+
+    <!-- סעיף 17 – ALERT -->
+    <script>
+        function sendAlert() {
+            alert("Your message was sent!");
+        }
+    </script>
+
+</body>
+
+</html>

@@ -5,46 +5,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
-<body>
-    <button onclick="demoNative()">Native Types</button>
-    <button id="btn2">Register Click From Code</button>
+<body class="p-3">
 
-    <hr>
-    <table>
-        <tr>
-            <td style="padding:5xp;"></td>
+    <div class="container">
 
-            <td>
-                <input id="txt1" type="text" style="width:200px">
-            </td>
+        <button onclick="demoNative()" class="btn btn-primary mb-3">Native Types</button>
+        <button id="btn2" class="btn btn-secondary mb-3">Register Click From Code</button>
 
-            <td style="padding:5xp;">
-                <label>+</label>
-            </td>
+        <hr>
 
-            <td style="padding:5xp;">
-                <input id="txt2" type="text" style="width:200px">
-            </td>
+        <!-- Calculator Row -->
+        <div class="row g-2">
 
-            <td style="padding:5xp;">
-                <button id="btnCalc">=</button>
-            </td>
+            <div class="col-12 col-md-3">
+                <input id="txt1" type="text" class="form-control" placeholder="מספר ראשון">
+            </div>
 
-            <td style="padding:5xp; ">
+            <div class="col-12 col-md-1 text-center">
+                <h4>+</h4>
+            </div>
+
+            <div class="col-12 col-md-3">
+                <input id="txt2" type="text" class="form-control" placeholder="מספר שני">
+            </div>
+
+            <div class="col-12 col-md-1">
+                <button id="btnCalc" class="btn btn-success w-100">=</button>
+            </div>
+
+            <div class="col-12 col-md-4">
                 <h3 id="lblRes"></h3>
-            </td>
-        </tr>
-    </table>
-    </hr>
+            </div>
+        </div>
 
-    <br>
-    <hr>
-    <textarea id="output" style="width:100%; height:500xp" cols="90" rows="20"></textarea>
+        <hr>
 
+        <!-- Textarea -->
+        <textarea id="output" class="form-control" rows="10"></textarea>
+
+        <hr>
+
+        <!-- RESPONSIVE IMAGES -->
+        <div class="mt-4">
+
+            <!-- Mobile -->
+            <img src="images/mobile.png" class="img-fluid d-block d-md-none" alt="Mobile">
+
+            <!-- Tablet -->
+            <img src="images/tablet.png" class="img-fluid d-none d-md-block d-lg-none" alt="Tablet">
+
+            <!-- Desktop -->
+            <img src="images/desktop.png" class="img-fluid d-none d-lg-block" alt="Desktop">
+
+        </div>
+
+    </div>
+
+    <script src="index.js"></script>
 
 </body>
-<script src="index.js"></script>
-
 </html>

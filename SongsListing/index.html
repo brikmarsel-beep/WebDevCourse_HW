@@ -1,29 +1,46 @@
-
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>TubeTracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TubeTracker - Marsel Abu Saleh</title>
+
+    <!-- Bootswatch (Bootstrap theme) -->
     <link rel="stylesheet" href="https://bootswatch.com/5/cyborg/bootstrap.min.css">
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body class="p-4">
 <div class="container">
-    <h1 class="text-center text-primary mb-4">🎵 Excercise Songs List</h1>
+    <h1 class="text-center text-primary mb-4">
+        🎵 Exercise Songs List – Marsel Abu Saleh
+    </h1>
 
+    <!-- Form card -->
     <div class="card border-primary mb-4">
         <div class="card-body">
             <form id="songForm" class="row g-2">
-                <input type="hidden" id="songId"> 
-                
-                <div class="col-md-5">
-                    <input type="text" id="title" class="form-control" placeholder="Song Title" required>
+                <!-- hidden id for edit mode -->
+                <input type="hidden" id="songId">
+
+                <div class="col-md-4">
+                    <input type="text" id="title" class="form-control"
+                           placeholder="Song Title" required>
                 </div>
-                <div class="col-md-5">
-                    <input type="url" id="url" class="form-control" placeholder="YouTube URL" required>
+
+                <div class="col-md-4">
+                    <input type="url" id="url" class="form-control"
+                           placeholder="YouTube URL" required>
                 </div>
+
                 <div class="col-md-2">
-                    <button type="submit" id="submitBtn" class="btn btn-success w-100">
+                    <input type="number" id="rating" class="form-control"
+                           placeholder="Rating 1–10" min="1" max="10" required>
+                </div>
+
+                <div class="col-md-2">
+                    <button type="submit" id="submitBtn"
+                            class="btn btn-success w-100">
                         <i class="fas fa-plus"></i> Add
                     </button>
                 </div>
@@ -31,19 +48,66 @@
         </div>
     </div>
 
-    <div class="d-flex justify-content-between mb-3">
-        <input type="text" id="search" class="form-control w-50" placeholder="Search...">
-        <select id="sort" class="form-select w-25">
-            <option value="newest">Newest First</option>
-            <option value="az">A-Z</option>
-        </select>
+    <!-- Search + sort + view toggle -->
+    <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2">
+
+        <!-- search -->
+        <div class="flex-grow-1">
+            <input type="text" id="search" class="form-control"
+                   placeholder="Search by title...">
+        </div>
+
+        <!-- sort radios -->
+        <div class="d-flex align-items-center gap-2">
+            <span class="fw-bold">Sort:</span>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input sort-radio" type="radio"
+                       name="sortBy" id="sortTitle" value="title" checked>
+                <label class="form-check-label" for="sortTitle">Title</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input sort-radio" type="radio"
+                       name="sortBy" id="sortDate" value="date">
+                <label class="form-check-label" for="sortDate">Date</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input sort-radio" type="radio"
+                       name="sortBy" id="sortRating" value="rating">
+                <label class="form-check-label" for="sortRating">Rating</label>
+            </div>
+        </div>
+
+        <!-- toggle table/cards -->
+        <button id="btnToggleView" class="btn btn-outline-info">
+            View: Table
+        </button>
     </div>
 
-    <table class="table table-hover">
-        <thead><tr><th>Title</th><th>Link</th><th class="text-end">Actions</th></tr></thead>
-        <tbody id="songList"></tbody>
-    </table>
+    <!-- TABLE VIEW -->
+    <div id="tableView" class="table-responsive">
+        <table class="table table-hover align-middle">
+            <thead>
+            <tr>
+                <th>Thumbnail</th>
+                <th>Title</th>
+                <th>Rating</th>
+                <th>Date added</th>
+                <th class="text-end">Actions</th>
+            </tr>
+            </thead>
+            <tbody id="songList"></tbody>
+        </table>
+    </div>
+
+    <!-- CARDS VIEW -->
+    <div id="cardsView" class="row g-3 d-none">
+        <!-- cards generated by JS -->
+    </div>
 </div>
+
 <script src="index.js"></script>
 </body>
 </html>
